@@ -1,6 +1,6 @@
 Summary:	MBROLA is a speech synthesizer based on the concatenation of diphones
 Summary(pl):    MBROLA to syntezator mowy bazuj±cy na ³±czeniu ?dwu?zg³osek??? 
-Name:		festival
+Name:		mbrola
 Version:	301h?
 Release:	1
 License:	Non-commercial, non-military purposes, w/ and only w/ the voice and language databases available on http://tcts.fpms.ac.be/synthesis 
@@ -11,7 +11,7 @@ Source2:	http://tcts.fpms.ac.be/synthesis/mbrola/dba/us2/us2-980812.zip
 Source3:	http://tcts.fpms.ac.be/synthesis/mbrola/dba/us3/us3-990208.zip
 Source4:	http://tcts.fpms.ac.be/synthesis/mbrola/dba/en1/en1-980910.zip
 Source5:	http://tcts.fpms.ac.be/synthesis/mbrola/dba/pl1/pl1.zip
-URL:        http://tcts.fpms.ac.be/synthesis/mbrola.html
+URL:		http://tcts.fpms.ac.be/synthesis/mbrola.html
 
 %description
 MBROLA is a  speech synthesizer  based  on the concatenation  of
@@ -48,6 +48,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc readme.txt
 
-%files us1
+%files voice-us1
 %defattr(644,root,root,755)
 %{_datadir}/
