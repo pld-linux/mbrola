@@ -44,6 +44,7 @@ fonetyczno-prozodyczne jako dane wynikowe.
 Summary:	Files for voice us1 to be used w/ festival
 Summary(pl):	Pliki do g這su us1 przeznaczone dla festival
 Group:		Applications/Sound
+Requires:	%{name}
 
 %description voice-us1
 Files for voice us1 to be used w/ festival.
@@ -55,6 +56,7 @@ Pliki do g這su us1 przeznaczone dla festival.
 Summary:	Files for voice us2 to be used w/ festival
 Summary(pl):	Pliki do g這su us2 przeznaczone dla festival
 Group:		Applications/Sound
+Requires:	%{name}
 
 %description voice-us2
 Files for voice us2 to be used w/ festival.
@@ -66,6 +68,7 @@ Pliki do g這su us2 przeznaczone dla festival.
 Summary:	Files for voice us3 to be used w/ festival
 Summary(pl):	Pliki do g這su us3 przeznaczone dla festival
 Group:		Applications/Sound
+Requires:	%{name}
 
 %description voice-us3
 Files for voice us3 to be used w/ festival.
@@ -77,6 +80,7 @@ Pliki do g這su us3 przeznaczone dla festival.
 Summary:	Files for voice en1 to be used w/ festival
 Summary(pl):	Pliki do g這su en1 przeznaczone dla festival
 Group:		Applications/Sound
+Requires:	%{name}
 
 %description voice-en1
 Files for voice en1 to be used w/ festival.
@@ -88,6 +92,7 @@ Pliki do g這su en1 przeznaczone dla festival.
 Summary:	Files for voice pl1 to be used w/ festival
 Summary(pl):	Pliki do g這su pl1 przeznaczone dla festival
 Group:		Applications/Sound
+Requires:	%{name}
 
 %description voice-pl1
 Files for voice pl1 to be used w/ festival.
