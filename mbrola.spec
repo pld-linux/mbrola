@@ -788,6 +788,250 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/festival/lib/voices/polish/pl1_mbrola
 %{_datadir}/festival/lib/voices/polish/pl1_mbrola/pl1
 
+
+%files	voice-af
+%defattr(644,root,root,755)
+%{_datadir}/festival/lib/voices/afrikaans
+%doc %dir af1/test
+%doc af1/*.txt
+
+%files	voice-ar
+%defattr(644,root,root,755)
+%{_datadir}/festival/lib/voices/arabic
+%doc %dir ar1/TEST
+%doc ar1/*.txt
+%doc %dir ar2/Test
+%doc ar2/*.txt
+
+%files	voice-br
+%defattr(644,root,root,755)
+%{_datadir}/festival/lib/voices/brazilian_portuguese
+%doc %dir br1/TEST
+%doc br1/*.txt
+%doc %dir br2/TEST
+%doc br2/*.txt
+%doc %dir br3/TEST
+%doc br3/*.txt
+
+%files	voice-bz
+%defattr(644,root,root,755)
+%{_datadir}/festival/lib/voices/breton
+%doc %dir bz1/TEST
+%doc bz1/*.txt
+
+%files	voice-ca
+%defattr(644,root,root,755)
+%{_datadir}/festival/lib/voices/canadian_french
+%doc %dir ca1/test
+%doc ca1/*.txt
+%doc %dir ca2/test
+%doc ca2/*.txt
+
+%files	voice-cr
+%defattr(644,root,root,755)
+%{_datadir}/festival/lib/voices/croation
+%doc %dir cr1/TEST
+%doc cr1/*.txt
+
+%files	voice-cz
+%defattr(644,root,root,755)
+%{_datadir}/festival/lib/voices/czech
+%doc %dir cz1/TEST
+%doc cz1/*.txt
+%doc %dir cz2/Test
+%doc cz2/*.txt
+
+%files	voice-nl
+%defattr(644,root,root,755)
+%{_datadir}/festival/lib/voices/dutch
+%doc %dir nl1/TEST
+%doc nl1/*.txt
+%doc %dir nl2/TEST
+%doc nl2/*.txt
+%doc %dir nl3/TEST
+%doc nl3/*.txt
+
+%files	voice-nz
+%defattr(644,root,root,755)
+%{_datadir}/festival/lib/voices/maori
+%doc %dir nz1/TEST
+%doc nz1/*.txt
+
+%files	voice-ee
+%defattr(644,root,root,755)
+%{_datadir}/festival/lib/voices/estonian
+%doc %dir ee1/TEST
+%doc ee1/*.txt
+
+%files	voice-pt
+%defattr(644,root,root,755)
+%{_datadir}/festival/lib/voices/european_portuguese
+%doc %dir pt1/TEST
+%doc pt1/*.txt
+
+%files	voice-fr
+%defattr(644,root,root,755)
+%{_datadir}/festival/lib/voices/french
+%doc %dir fr1/TEST
+%doc fr1/*.txt
+%doc %dir fr2/TEST
+%doc fr2/*.txt
+%doc %dir fr3/TEST
+%doc fr3/*.txt
+%doc %dir fr4/TEST
+%doc fr4/*.txt
+%doc %dir fr5/TEST
+%doc fr5/*.txt
+%doc %dir fr6/TEST
+%doc fr6/*.txt
+%doc %dir fr7/TEST
+%doc fr7/*.txt
+
+%files	voice-de
+%defattr(644,root,root,755)
+%{_datadir}/festival/lib/voices/german
+%doc %dir de1/TEST
+%doc de1/*.txt
+%doc %dir de2/TEST
+%doc de2/*.txt
+%doc %dir de3/TEST
+%doc de3/*.txt
+%doc %dir de4/test
+%doc de4/*.txt
+%doc %dir de5/test
+%doc de5/*.txt
+%doc %dir de6/TEST
+%doc de6/*.txt
+%doc %dir de7/test
+%doc de7/*.txt
+
+%files	voice-gr
+%defattr(644,root,root,755)
+%{_datadir}/festival/lib/voices/greek
+%doc %dir gr1/TEST
+%doc gr1/*.txt
+%doc %dir gr2/TEST
+%doc gr2/*.txt
+
+%files	voice-hb
+%defattr(644,root,root,755)
+%{_datadir}/festival/lib/voices/hebrew
+%doc %dir hb1/TEST
+%doc hb1/*.txt
+
+%files	voice-ic
+%defattr(644,root,root,755)
+%{_datadir}/festival/lib/voices/icelandic
+%doc %dir ic1/test
+%doc ic1/*.txt
+
+%files	voice-id
+%defattr(644,root,root,755)
+%{_datadir}/festival/lib/voices/indonesian
+%doc %dir id1/Test
+%doc id1/*.txt
+
+%files	voice-in
+%defattr(644,root,root,755)
+%{_datadir}/festival/lib/voices/hindi
+%doc %dir in1/TEST
+%doc in1/*.txt
+%doc %dir in2/TEST
+%doc in2/*.txt
+
+%files	voice-ir
+%defattr(644,root,root,755)
+%{_datadir}/festival/lib/voices/iranian
+%doc %dir ir1/test
+%doc ir1/*.txt
+
+%files	voice-it
+%defattr(644,root,root,755)
+%{_datadir}/festival/lib/voices/italian
+%doc %dir it1/TEST
+%doc it1/*.txt
+%doc %dir it2/TEST
+%doc it2/*.txt
+%doc %dir it3/TEST
+%doc it3/*.txt
+%doc %dir it4/TEST
+%doc it4/*.txt
+
+%files	voice-hn
+%defattr(644,root,root,755)
+%{_datadir}/festival/lib/voices/korean
+%doc %dir hn1/TEST
+%doc hn1/*.txt
+
+%files	voice-jp
+%defattr(644,root,root,755)
+%{_datadir}/festival/lib/voices/japanese
+%doc %dir jp1/TEST
+%doc jp1/*.txt
+%doc %dir jp2/test
+%doc jp2/*.txt
+%doc %dir jp3/test
+%doc jp3/*.txt
+
+%files	voice-lt
+%defattr(644,root,root,755)
+%{_datadir}/festival/lib/voices/lithuanian
+%doc %dir lt1/test
+%doc lt1/*.txt
+%doc %dir lt2/test
+%doc lt2/*.txt
+
+%files	voice-es
+%defattr(644,root,root,755)
+%{_datadir}/festival/lib/voices/spanish
+%doc %dir es1/TEST
+%doc es1/*.txt
+%doc %dir es2/TEST
+%doc es2/*.txt
+%doc %dir es4/test
+%doc es4/*.txt
+
+%files	voice-mx
+%defattr(644,root,root,755)
+%{_datadir}/festival/lib/voices/spanish_mexican
+%doc %dir mx1/TEST
+%doc mx1/*.txt
+
+%files	voice-ro
+%defattr(644,root,root,755)
+%{_datadir}/festival/lib/voices/romanian
+%doc %dir ro1/TEST
+%doc ro1/*.txt
+
+%files	voice-sw
+%defattr(644,root,root,755)
+%{_datadir}/festival/lib/voices/swedish
+%doc %dir sw1/TEST
+%doc sw1/*.txt
+%doc %dir sw2/TEST
+%doc sw2/*.txt
+
+%files	voice-tl
+%defattr(644,root,root,755)
+%{_datadir}/festival/lib/voices/telugu
+%doc %dir tl1/TEST
+%doc tl1/*.txt
+
+%files	voice-tr
+%defattr(644,root,root,755)
+%{_datadir}/festival/lib/voices/turkish
+%doc %dir tr1/TEST1
+%doc tr1/*.txt
+%doc %dir tr2/TEST
+%doc tr2/*.txt
+
+%files	voice-vz
+%defattr(644,root,root,755)
+%{_datadir}/festival/lib/voices/venezuelan_spanish
+%doc %dir vz1/test
+%doc vz1/*.txt
+
+
 %define date	%(LC_ALL="C" date +"%a %b %d %Y")
 
 %changelog
@@ -795,7 +1039,10 @@ rm -rf $RPM_BUILD_ROOT
 All persons listed below can be reached at <cvs_login>@pld-linux.org
 
 $Log: mbrola.spec,v $
-Revision 1.11  2004-06-15 11:12:08  djurban
+Revision 1.12  2004-06-15 11:19:15  djurban
+- added files for nie pkgs
+
+Revision 1.11  2004/06/15 11:12:08  djurban
 - nearly finished %prep works, %install needs a oneliner. commiting to add %files on a different machine
 
 Revision 1.10  2004/06/13 17:13:03  djurban
