@@ -595,7 +595,18 @@ mbrola i festival.
 
 
 %prep
-%setup -q -c %{name} -a1 -a2 -a3 -a4 -a5 -c pl -a6 -a7 -a8 -a9 -a10 -a11 -a12 -a13 -a14 -a15 -a16 -a17 -a18 -a19 -a20 -a21 -a22 -a23 -a24 -a25 -a26 -a27 -a28 -a29 -a30 -a31 -a32 -a33 -a34 -a35 -a36 -a37 -a38 -a39 -a40 -a41 -a42 -a43 -a44 -a45 -a46 -a47 -a48 -a49 -a50 -a51 -a52 -a53 -a54 -a55 -a56 -a57 -a58 -a59 -a60 -a61 -a62 -a63 -a64 -a65 -a66
+%setup -q -c %{name} -a1 -a2 -a3 -a4 -a6 -a7 -a9 -a10 -a11 -a12 -a13 -a14 -a15 -a16 -a18 -a19 -a20 -a22 -a23 -a24 -a25 -a26 -a28 -a29 -a30 -a31 -a32 -a33 -a35 -a36 -a38 -a39 -a40 -a41 -a43 -a44 -a45 -a46 -a47 -a48 -a49 -a50 -a51 -a52 -a53 -a54 -a55 -a56 -a57 -a58 -a59 -a60 -a61 -a62 -a63 -a64 -a65 -a66
+%{__unzip} -qq %{SOURCE5} -d pl1
+%{__unzip} -qq %{SOURCE8} -d ar2
+%{__unzip} -qq %{SOURCE17} -d cz2
+%{__unzip} -qq %{SOURCE21} -d nz1
+%{__unzip} -qq %{SOURCE27} -d fr4
+%{__unzip} -qq %{SOURCE34} -d de4
+%{__unzip} -qq %{SOURCE37} -d de7
+%{__unzip} -qq %{SOURCE42} -d id1
+
+
+
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -605,8 +616,8 @@ install -d $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/arabic/ar1_mbrola/ar1
 install -d $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/arabic/ar2_mbrola/ar2
 install -d $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/brazilian_portuguese/br1_mbrola/br1
 install -d $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/breton/bz1_mbrola/bz1
-install -d $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/canadian french/ca1_mbrola/ca1
-install -d $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/canadian french/ca2_mbrola/ca2
+install -d $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/canadia_ french/ca1_mbrola/ca1
+install -d $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/canadian_french/ca2_mbrola/ca2
 install -d $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/croation/cr1_mbrola/cr1
 install -d $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/czech/cz1_mbrola/cz1
 install -d $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/czech/cz2_mbrola/cz2
@@ -674,7 +685,68 @@ install us1/us1{,mrpa} $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/english/us
 install us2/us2 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/english/us2_mbrola/us2/
 install us3/us3 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/english/us3_mbrola/us3/
 install en1/en1{,mrpa} $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/english/en1_mbrola/en1/
-install pl1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/polish/pl1_mbrola/pl1/
+install pl1/pl1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/polish/pl1_mbrola/pl1/
+install af1/af1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/afrikaans/af1_mbrola/af1
+install ar1/ar1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/arabic/ar1_mbrola/ar1
+install ar2/ar2 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/arabic/ar2_mbrola/ar2
+install br1/br1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/brazilian_portuguese/br1_mbrola/br1
+install br2/br2 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/brazilian_portuguese/br2_mbrola/br2
+install br3/br3 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/brazilian_portuguese/br3_mbrola/br3
+install bz1/bz1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/breton/bz1_mbrola/bz1
+install ca1/ca1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/canadian_french/ca1_mbrola/ca1
+install ca2/ca2 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/canadian_french/ca2_mbrola/ca2
+install cr1/cr1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/croation/cr1_mbrola/cr1
+install cz1/cz1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/czech/cz1_mbrola/cz1
+install cz2/cz2 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/czech/cz2_mbrola/cz2
+install nl1/nl1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/dutch/nl1_mbrola/nl1
+install nl2/nl2 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/dutch/nl2_mbrola/nl2
+install nl3/nl3 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/dutch/nl3_mbrola/nl3
+install nz1/nz1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/maori/nz1_mbrola/nz1
+install ee1/ee1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/estonian/ee1_mbrola/ee1
+install pt1/pt1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/european_portuguese/pt1_mbrola/pt1
+install fr1/fr1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/french/fr1_mbrola/fr1
+install fr2/fr2 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/french/fr2_mbrola/fr2
+install fr3/fr3 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/french/fr3_mbrola/fr3
+install fr4/fr4 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/french/fr4_mbrola/fr4
+install fr5/fr5 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/french/fr5_mbrola/fr5
+install fr6/fr6 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/french/fr6_mbrola/fr6
+install fr7/fr7 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/french/fr7_mbrola/fr7
+install de1/de1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/german/de1_mbrola/de1
+install de2/de2 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/german/de2_mbrola/de2
+install de3/de3 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/german/de3_mbrola/de3
+install de4/de4 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/german/de4_mbrola/de4
+install de5/de5 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/german/de5_mbrola/de5
+install de6/de6 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/german/de6_mbrola/de6
+install de7/de7 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/german/de7_mbrola/de7
+install gr1/gr1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/greek/gr1_mbrola/gr1
+install gr2/gr2 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/greek/gr2_mbrola/gr2
+install hb1/hb1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/hebrew/hb1_mbrola/hb1
+install ic1/ic1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/icelandic/ic1_mbrola/ic1
+install id1/id1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/indonesian/id1_mbrola/id1
+install in1/in1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/hindi/in1_mbrola/in1
+install in2/in2 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/hindi/in2_mbrola/in2
+install ir1/ir1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/iranian/ir1_mbrola/ir1
+install it1/it1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/italian/it1_mbrola/it1
+install it2/it2 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/italian/it2_mbrola/it2
+install it3/it3 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/italian/it3_mbrola/it3
+install it4/it4 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/italian/it4_mbrola/it4
+install hn1/hn1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/korean/hn1_mbrola/hn1
+install jp1/jp1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/japanese/jp1_mbrola/jp1
+install jp2/jp2 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/japanese/jp2_mbrola/jp2
+install jp3/jp3 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/japanese/jp3_mbrola/jp3
+install lt1/lt1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/lithuanian/lt1_mbrola/lt1
+install lt2/lt2 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/lithuanian/lt2_mbrola/lt2
+install es1/es1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/spanish/es1_mbrola/es1
+install es2/es2 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/spanish/es2_mbrola/es2
+install es4/es4 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/spanish/es4_mbrola/es4
+install mx1/mx1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/spanish_mexican/mx1_mbrola/mx1
+install ro1/ro1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/romanian/ro1_mbrola/ro1
+install sw1/sw1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/swedish/sw1_mbrola/sw1
+install sw2/sw2 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/swedish/sw2_mbrola/sw2
+install tl1/tl1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/telugu/tl1_mbrola/tl1
+install tr1/tr1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/turkish/tr1_mbrola/tr1
+install tr2/tr2 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/turkish/tr2_mbrola/tr2
+install vz1/vz1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/venezuelan_spanish/vz1_mbrola/vz1
 
 
 
@@ -711,19 +783,22 @@ rm -rf $RPM_BUILD_ROOT
 
 %files voice-pl
 %defattr(644,root,root,755)
-%doc pl1.txt license.txt
-%doc %dir test
+%doc pl1/pl1.txt pl1/license.txt
+%doc %dir pl1/test
 %dir %{_datadir}/festival/lib/voices/polish/pl1_mbrola
 %{_datadir}/festival/lib/voices/polish/pl1_mbrola/pl1
 
-%define date	%(`LC_ALL="C" date +"%a %b %d %Y"`)
+%define date	%(LC_ALL="C" date +"%a %b %d %Y")
 
 %changelog
 * %{date}  PLD Team <feedback@pld-linux.org>
 All persons listed below can be reached at <cvs_login>@pld-linux.org
 
 $Log: mbrola.spec,v $
-Revision 1.10  2004-06-13 17:13:03  djurban
+Revision 1.11  2004-06-15 11:12:08  djurban
+- nearly finished %prep works, %install needs a oneliner. commiting to add %files on a different machine
+
+Revision 1.10  2004/06/13 17:13:03  djurban
 - begin update, added 60 voices for different language (incl. german, french, hebrew, italian etc.)
 
 Revision 1.9  2004/04/26 17:05:05  adamg
