@@ -140,6 +140,7 @@ Source65:	http://tcts.fpms.ac.be/synthesis/mbrola/dba/tr2/tr2-010212.zip
 Source66:	http://tcts.fpms.ac.be/synthesis/mbrola/dba/vz1/vz1.zip
 # Source66-md5:	3d1f96e4fbc43c36560f2bd942b1642a
 URL:		http://tcts.fpms.ac.be/synthesis/mbrola.html
+BuildRequires:	unzip
 ExclusiveArch:	%{ix86} ppc alpha sparc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -937,7 +938,10 @@ rm -rf $RPM_BUILD_ROOT
 All persons listed below can be reached at <cvs_login>@pld-linux.org
 
 $Log: mbrola.spec,v $
-Revision 1.15  2004-10-06 23:10:34  havner
+Revision 1.16  2005-02-26 20:06:01  darekr
+- BR: unzip
+
+Revision 1.15  2004/10/06 23:10:34  havner
 - rel 3
 
 Revision 1.14  2004/06/19 17:58:02  qboosh
