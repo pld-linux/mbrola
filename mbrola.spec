@@ -6,11 +6,17 @@ Release:	1
 License:	Non-commercial, non-military purposes, w/ and only w/ the voice and language databases available on http://tcts.fpms.ac.be/synthesis
 Group:		Applications/Sound
 Source0:	http://tcts.fpms.ac.be/synthesis/mbrola/bin/pclinux/mbr%{version}.zip
+# Source0-md5:	083e3e93c6d6b7d238d4e8c9b80f6111
 Source1:	http://tcts.fpms.ac.be/synthesis/mbrola/dba/us1/us1-980512.zip
+# Source1-md5:	1b21560b45c5566cf4672e8eb7393490
 Source2:	http://tcts.fpms.ac.be/synthesis/mbrola/dba/us2/us2-980812.zip
+# Source2-md5:	185045d55456694f4f104173e43bbb89
 Source3:	http://tcts.fpms.ac.be/synthesis/mbrola/dba/us3/us3-990208.zip
+# Source3-md5:	544840204a6e120cef67176769629ecb
 Source4:	http://tcts.fpms.ac.be/synthesis/mbrola/dba/en1/en1-980910.zip
+# Source4-md5:	725b1fb0af1f6d62414d786de6eaa143
 Source5:	http://tcts.fpms.ac.be/synthesis/mbrola/dba/pl1/pl1.zip
+# Source5-md5:	2e67625c2d10da642466f6290bdecb8d
 URL:		http://tcts.fpms.ac.be/synthesis/mbrola.html
 ExclusiveArch:	%{ix86} ppc alpha
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
