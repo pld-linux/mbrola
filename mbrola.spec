@@ -141,7 +141,7 @@ Source66:	http://tcts.fpms.ac.be/synthesis/mbrola/dba/vz1/vz1.zip
 # Source66-md5:	3d1f96e4fbc43c36560f2bd942b1642a
 
 URL:		http://tcts.fpms.ac.be/synthesis/mbrola.html
-ExclusiveArch:	%{ix86} ppc alpha
+ExclusiveArch:	%{ix86} ppc alpha sparc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -615,8 +615,10 @@ install -d $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/afrikaans/af1_mbrola/a
 install -d $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/arabic/ar1_mbrola/ar1
 install -d $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/arabic/ar2_mbrola/ar2
 install -d $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/brazilian_portuguese/br1_mbrola/br1
+install -d $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/brazilian_portuguese/br2_mbrola/br2
+install -d $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/brazilian_portuguese/br3_mbrola/br3
 install -d $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/breton/bz1_mbrola/bz1
-install -d $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/canadia_ french/ca1_mbrola/ca1
+install -d $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/canadian_french/ca1_mbrola/ca1
 install -d $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/canadian_french/ca2_mbrola/ca2
 install -d $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/croation/cr1_mbrola/cr1
 install -d $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/czech/cz1_mbrola/cz1
@@ -655,10 +657,12 @@ install -d $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/italian/it3_mbrola/it3
 install -d $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/italian/it4_mbrola/it4
 install -d $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/korean/hn1_mbrola/hn1
 install -d $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/japanese/jp1_mbrola/jp1
+install -d $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/japanese/jp2_mbrola/jp2
+install -d $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/japanese/jp3_mbrola/jp3
 install -d $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/lithuanian/lt1_mbrola/lt1
+install -d $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/lithuanian/lt2_mbrola/lt2
 install -d $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/spanish/es1_mbrola/es1
 install -d $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/spanish/es2_mbrola/es2
-install -d $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/spanish/es3_mbrola/es3
 install -d $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/spanish/es4_mbrola/es4
 install -d $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/spanish_mexican/mx1_mbrola/mx1
 install -d $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/romanian/ro1_mbrola/ro1
@@ -678,6 +682,9 @@ install mbrola206a-linux-ppc	$RPM_BUILD_ROOT%{_bindir}/mbrola
 %endif
 %ifarch alpha
 install mbrola-linux-alpha	$RPM_BUILD_ROOT%{_bindir}/mbrola
+%endif
+%ifarch sparc
+install mbrola-SuSElinux-ultra1.dat $RPM_BUILD_ROOT%{_bindir}/mbrola
 %endif
 # there is sparc binary also
 
@@ -701,7 +708,7 @@ install cz2/cz2 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/czech/cz2_mbrola/
 install nl1/nl1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/dutch/nl1_mbrola/nl1
 install nl2/nl2 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/dutch/nl2_mbrola/nl2
 install nl3/nl3 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/dutch/nl3_mbrola/nl3
-install nz1/nz1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/maori/nz1_mbrola/nz1
+install nz1/ma1r2 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/maori/nz1_mbrola/ma1r2
 install ee1/ee1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/estonian/ee1_mbrola/ee1
 install pt1/pt1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/european_portuguese/pt1_mbrola/pt1
 install fr1/fr1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/french/fr1_mbrola/fr1
@@ -1039,7 +1046,10 @@ rm -rf $RPM_BUILD_ROOT
 All persons listed below can be reached at <cvs_login>@pld-linux.org
 
 $Log: mbrola.spec,v $
-Revision 1.12  2004-06-15 11:19:15  djurban
+Revision 1.13  2004-06-15 11:39:42  djurban
+- finished, added sparc binary, ppc binary is now version 302 instead od 206 earlier
+
+Revision 1.12  2004/06/15 11:19:15  djurban
 - added files for nie pkgs
 
 Revision 1.11  2004/06/15 11:12:08  djurban
