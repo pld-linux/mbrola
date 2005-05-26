@@ -752,13 +752,21 @@ install tr1/tr1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/turkish/tr1_mbrol
 install tr2/tr2 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/turkish/tr2_mbrola/tr2
 install vz1/vz1 $RPM_BUILD_ROOT%{_datadir}/festival/lib/voices/venezuelan_spanish/vz1_mbrola/vz1
 
+for a in ar1 ar2 br1 br2 br3 ca1 ca2 cz1 cz2 de1 de2 de3 de4 de5 de6 de7 \
+	 es1 es2 es4 fr1 fr2 fr3 fr4 fr5 fr6 fr7 gr1 gr2 in1 in2 it1 it2 \
+	 it3 it4 jp1 jp2 jp3 lt1 lt2 nl1 nl2 nl3 sw1 sw2 tr1 tr2 us1 us2 \
+	 us3; do
+	rm -f $a/$a
+done
+rm -f br1/br1sampa.set
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/*
 %doc readme.txt
+%attr(755,root,root) %{_bindir}/*
 
 %files voice-af
 %defattr(644,root,root,755)
@@ -767,22 +775,22 @@ rm -rf $RPM_BUILD_ROOT
 
 %files voice-ar
 %defattr(644,root,root,755)
-%doc ar1/*.txt ar1/TEST ar2/*.txt ar2/Test
+%doc ar1 ar2
 %{_datadir}/festival/lib/voices/arabic
 
 %files voice-br
 %defattr(644,root,root,755)
-%doc br1/*.txt br1/TEST br2/*.txt br2/TEST br3/*.txt br3/TEST
+%doc br1 br2 br3
 %{_datadir}/festival/lib/voices/brazilian_portuguese
 
 %files voice-bz
 %defattr(644,root,root,755)
-%doc bz1/*.txt bz2/TEST
+%doc bz1/*.txt bz1/TEST
 %{_datadir}/festival/lib/voices/breton
 
 %files voice-ca
 %defattr(644,root,root,755)
-%doc ca1/*.txt ca1/test ca2/*.txt ca2/test
+%doc ca1 ca2
 %{_datadir}/festival/lib/voices/canadian_french
 
 %files voice-cr
@@ -792,12 +800,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %files voice-cz
 %defattr(644,root,root,755)
-%doc cz1/*.txt cz1/TEST cz2/*.txt cz2/Test
+%doc cz1 cz2
 %{_datadir}/festival/lib/voices/czech
 
 %files voice-de
 %defattr(644,root,root,755)
-%doc de1/*.txt de1/TEST de2/*.txt de2/TEST de3/*.txt de3/TEST de4/*.txt de4/test de5/*.txt de5/test de6/*.txt de6/TEST de7/*.txt de7/test
+%doc de1 de2 de3 de4 de5 de6 de7
 %{_datadir}/festival/lib/voices/german
 
 %files voice-ee
@@ -813,17 +821,17 @@ rm -rf $RPM_BUILD_ROOT
 
 %files voice-es
 %defattr(644,root,root,755)
-%doc es1/*.txt es1/TEST es2/*.txt es2/TEST es4/*.txt es4/test
+%doc es1 es2 es4
 %{_datadir}/festival/lib/voices/spanish
 
 %files voice-fr
 %defattr(644,root,root,755)
-%doc fr1/*.txt fr1/TEST fr2/*.txt fr2/TEST fr3/*.txt fr3/TEST fr4/*.txt fr4/TEST fr5/*.txt fr5/TEST fr6/*.txt fr6/TEST fr7/*.txt fr7/TEST
+%doc fr1 fr2 fr3 fr4 fr5 fr6 fr7
 %{_datadir}/festival/lib/voices/french
 
 %files voice-gr
 %defattr(644,root,root,755)
-%doc gr1/*.txt gr1/TEST gr2/*.txt gr2/TEST
+%doc gr1 gr2
 %{_datadir}/festival/lib/voices/greek
 
 %files voice-hb
@@ -848,7 +856,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files voice-in
 %defattr(644,root,root,755)
-%doc in1/*.txt in1/TEST in2/*.txt in2/TEST
+%doc in1 in2
 %{_datadir}/festival/lib/voices/hindi
 
 %files voice-ir
@@ -858,17 +866,17 @@ rm -rf $RPM_BUILD_ROOT
 
 %files voice-it
 %defattr(644,root,root,755)
-%doc it1/*.txt it1/TEST it2/*.txt it2/TEST it3/*.txt it3/TEST it4/*.txt it4/TEST
+%doc it1 it2 it3 it4
 %{_datadir}/festival/lib/voices/italian
 
 %files voice-jp
 %defattr(644,root,root,755)
-%doc jp1/*.txt jp1/TEST jp2/*.txt jp2/test jp3/*.txt jp3/test
+%doc jp1 jp2 jp3
 %{_datadir}/festival/lib/voices/japanese
 
 %files voice-lt
 %defattr(644,root,root,755)
-%doc lt1/*.txt lt1/test lt2/*.txt lt2/test
+%doc lt1 lt2
 %{_datadir}/festival/lib/voices/lithuanian
 
 %files voice-mx
@@ -878,17 +886,17 @@ rm -rf $RPM_BUILD_ROOT
 
 %files voice-nl
 %defattr(644,root,root,755)
-%doc nl1/*.txt nl1/TEST nl2/*.txt nl2/TEST nl3/*.txt nl3/TEST
+%doc nl1 nl2 nl3
 %{_datadir}/festival/lib/voices/dutch
 
 %files voice-nz
 %defattr(644,root,root,755)
-%doc nz1/*.txt nz2/TEST
+%doc nz1/*.txt nz1/TEST
 %{_datadir}/festival/lib/voices/maori
 
 %files voice-pl
 %defattr(644,root,root,755)
-%doc pl1/pl1.txt pl1/license.txt pl1/test
+%doc pl1/*.txt pl1/test
 %dir %{_datadir}/festival/lib/voices/polish/pl1_mbrola
 %{_datadir}/festival/lib/voices/polish/pl1_mbrola/pl1
 
@@ -904,7 +912,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files voice-sw
 %defattr(644,root,root,755)
-%doc sw1/*.txt sw1/TEST sw2/*.txt sw2/TEST
+%doc sw1 sw2
 %{_datadir}/festival/lib/voices/swedish
 
 %files voice-tl
@@ -914,12 +922,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %files voice-tr
 %defattr(644,root,root,755)
-%doc tr1/*.txt tr1/TEST1 tr2/*.txt tr2/TEST
+%doc tr1 tr2
 %{_datadir}/festival/lib/voices/turkish
 
 %files voice-us
 %defattr(644,root,root,755)
-%doc us1/license.txt us1/us1.txt us1/TEST us2/license.txt us2/us2.txt us2/TEST us3/license.txt us3/us3.txt us3/TEST
+%doc us1 us2 us3
 %dir %{_datadir}/festival/lib/voices/english/us1_mbrola
 %{_datadir}/festival/lib/voices/english/us1_mbrola/us1
 %dir %{_datadir}/festival/lib/voices/english/us2_mbrola
@@ -938,7 +946,10 @@ rm -rf $RPM_BUILD_ROOT
 All persons listed below can be reached at <cvs_login>@pld-linux.org
 
 $Log: mbrola.spec,v $
-Revision 1.16  2005-02-26 20:06:01  darekr
+Revision 1.17  2005-05-26 20:16:00  ankry
+- fixed %doc
+
+Revision 1.16  2005/02/26 20:06:01  darekr
 - BR: unzip
 
 Revision 1.15  2004/10/06 23:10:34  havner
