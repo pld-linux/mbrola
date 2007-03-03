@@ -2,7 +2,7 @@ Summary:	MBROLA - a speech synthesizer based on the concatenation of diphones
 Summary(pl.UTF-8):	MBROLA - syntezator mowy bazujący na łączeniu dwuzgłosek
 Name:		mbrola
 Version:	301h
-Release:	3
+Release:	4
 License:	Non-commercial, non-military purposes, w/ and only w/ the voice and language databases available on http://tcts.fpms.ac.be/synthesis/
 Group:		Applications/Sound
 Source0:	http://tcts.fpms.ac.be/synthesis/mbrola/bin/pclinux/mbr%{version}.zip
@@ -946,7 +946,10 @@ rm -rf $RPM_BUILD_ROOT
 All persons listed below can be reached at <cvs_login>@pld-linux.org
 
 $Log: mbrola.spec,v $
-Revision 1.19  2007-02-13 06:46:53  glen
+Revision 1.20  2007-03-03 12:14:34  arekm
+- rel 4
+
+Revision 1.19  2007/02/13 06:46:53  glen
 - tabs in preamble
 
 Revision 1.18  2007/02/12 00:49:07  baggins
