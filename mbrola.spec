@@ -56,7 +56,6 @@ install mbrola-linux-alpha	$RPM_BUILD_ROOT%{_bindir}/mbrola
 %ifarch sparc
 install mbrola-SuSElinux-ultra1.dat $RPM_BUILD_ROOT%{_bindir}/mbrola
 %endif
-# there is sparc binary also
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -72,6 +71,9 @@ rm -rf $RPM_BUILD_ROOT
 All persons listed below can be reached at <cvs_login>@pld-linux.org
 
 $Log: mbrola.spec,v $
+Revision 1.22  2008-03-13 21:21:20  glen
+- sparc already handled
+
 Revision 1.21  2008-03-02 23:48:17  glen
 - sound datafiles moved to mbrola-voices.spec; rel 5
 
@@ -119,7 +121,7 @@ Revision 1.7  2003/05/25 05:50:29  misi3k
 - massive attack s/pld.org.pl/pld-linux.org/
 
 Revision 1.6  2002/08/06 11:05:06  wolf
-- added r: %%{name} to subpackages
+- added r: %{name} to subpackages
 
 Revision 1.5  2002/08/06 01:25:03  wolf
 - finished, STBR
@@ -135,4 +137,4 @@ Revision 1.2  2002/08/04 17:25:09  ankry
 - fixed package names
 
 Revision 1.1  2002/08/02 21:47:57  hunter
--NYF
+- NYF
