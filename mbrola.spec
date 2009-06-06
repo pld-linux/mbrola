@@ -7,9 +7,11 @@ License:	Non-commercial, non-military purposes, w/ and only w/ the voice and lan
 Group:		Applications/Sound
 Source0:	http://tcts.fpms.ac.be/synthesis/mbrola/bin/pclinux/mbr%{version}.zip
 # Source0-md5:	95314c9a545918729a5965f86859a28e
+Source1:	http://tcts.fpms.ac.be/synthesis/mbrola/bin/amd64linux/mbrola.zip
+# Source1-md5:	49e95e232d8d996351ad04dcc6392857
 URL:		http://tcts.fpms.ac.be/synthesis/mbrola.html
 BuildRequires:	unzip
-ExclusiveArch:	%{ix86} ppc alpha sparc
+ExclusiveArch:	%{ix86} x86_64 ppc alpha sparc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -38,7 +40,7 @@ uzyskać pełny system TTS trzeba posługiwać się tym syntezatorem
 fonetyczno-prozodyczne jako dane wynikowe.
 
 %prep
-%setup -q -c
+%setup -q -c -T -a 0 -a 1
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -46,6 +48,9 @@ install -d $RPM_BUILD_ROOT%{_bindir}
 
 %ifarch %{ix86}
 install mbrola-linux-i386	$RPM_BUILD_ROOT%{_bindir}/mbrola
+%endif
+%ifarch x86_64
+install mbrola	$RPM_BUILD_ROOT%{_bindir}/mbrola
 %endif
 %ifarch ppc
 install mbrola206a-linux-ppc	$RPM_BUILD_ROOT%{_bindir}/mbrola
@@ -71,7 +76,10 @@ rm -rf $RPM_BUILD_ROOT
 All persons listed below can be reached at <cvs_login>@pld-linux.org
 
 $Log: mbrola.spec,v $
-Revision 1.22  2008-03-13 21:21:20  glen
+Revision 1.23  2009-06-06 08:17:50  cactus
+- add arch x86_64
+
+Revision 1.22  2008/03/13 21:21:20  glen
 - sparc already handled
 
 Revision 1.21  2008-03-02 23:48:17  glen
