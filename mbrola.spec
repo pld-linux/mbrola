@@ -1,17 +1,19 @@
+# NOTE:
+# - x86_64 version is actually 3.01d
 Summary:	MBROLA - a speech synthesizer based on the concatenation of diphones
 Summary(pl.UTF-8):	MBROLA - syntezator mowy bazujący na łączeniu dwuzgłosek
 Name:		mbrola
 Version:	301h
-Release:	5
+Release:	6
 License:	Non-commercial, non-military purposes, w/ and only w/ the voice and language databases available on http://tcts.fpms.ac.be/synthesis/
 Group:		Applications/Sound
 Source0:	http://tcts.fpms.ac.be/synthesis/mbrola/bin/pclinux/mbr%{version}.zip
 # Source0-md5:	95314c9a545918729a5965f86859a28e
-Source1:	http://tcts.fpms.ac.be/synthesis/mbrola/bin/amd64linux/mbrola.zip
+Source1:	http://tcts.fpms.ac.be/synthesis/%{name}/bin/amd64linux/mbrola.zip
 # Source1-md5:	49e95e232d8d996351ad04dcc6392857
 URL:		http://tcts.fpms.ac.be/synthesis/mbrola.html
 BuildRequires:	unzip
-ExclusiveArch:	%{ix86} x86_64 ppc alpha sparc
+ExclusiveArch:	%{ix86} %{x8664} ppc alpha sparc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -76,7 +78,10 @@ rm -rf $RPM_BUILD_ROOT
 All persons listed below can be reached at <cvs_login>@pld-linux.org
 
 $Log: mbrola.spec,v $
-Revision 1.23  2009-06-06 08:17:50  cactus
+Revision 1.24  2009-06-06 11:50:03  glen
+- use macro for x86_64 arches; rel 6
+
+Revision 1.23  2009/06/06 08:17:50  cactus
 - add arch x86_64
 
 Revision 1.22  2008/03/13 21:21:20  glen
