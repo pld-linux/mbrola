@@ -4,7 +4,7 @@ Summary:	MBROLA - a speech synthesizer based on the concatenation of diphones
 Summary(pl.UTF-8):	MBROLA - syntezator mowy bazujący na łączeniu dwuzgłosek
 Name:		mbrola
 Version:	301h
-Release:	6
+Release:	7
 License:	Non-commercial, non-military purposes, w/ and only w/ the voice and language databases available on http://tcts.fpms.ac.be/synthesis/
 Group:		Applications/Sound
 Source0:	http://tcts.fpms.ac.be/synthesis/mbrola/bin/pclinux/mbr%{version}.zip
@@ -49,19 +49,19 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
 
 %ifarch %{ix86}
-install mbrola-linux-i386	$RPM_BUILD_ROOT%{_bindir}/mbrola
+install -p mbrola-linux-i386 $RPM_BUILD_ROOT%{_bindir}/mbrola
 %endif
 %ifarch x86_64
-install mbrola	$RPM_BUILD_ROOT%{_bindir}/mbrola
+install -p mbrola $RPM_BUILD_ROOT%{_bindir}/mbrola
 %endif
 %ifarch ppc
-install mbrola206a-linux-ppc	$RPM_BUILD_ROOT%{_bindir}/mbrola
+install -p mbrola206a-linux-ppc $RPM_BUILD_ROOT%{_bindir}/mbrola
 %endif
 %ifarch alpha
-install mbrola-linux-alpha	$RPM_BUILD_ROOT%{_bindir}/mbrola
+install -p mbrola-linux-alpha $RPM_BUILD_ROOT%{_bindir}/mbrola
 %endif
 %ifarch sparc
-install mbrola-SuSElinux-ultra1.dat $RPM_BUILD_ROOT%{_bindir}/mbrola
+install -p mbrola-SuSElinux-ultra1.dat $RPM_BUILD_ROOT%{_bindir}/mbrola
 %endif
 
 %clean
@@ -78,7 +78,10 @@ rm -rf $RPM_BUILD_ROOT
 All persons listed below can be reached at <cvs_login>@pld-linux.org
 
 $Log: mbrola.spec,v $
-Revision 1.24  2009-06-06 11:50:03  glen
+Revision 1.25  2009-10-22 19:15:52  glen
+- preserve perms; rel 7
+
+Revision 1.24  2009/06/06 11:50:03  glen
 - use macro for x86_64 arches; rel 6
 
 Revision 1.23  2009/06/06 08:17:50  cactus
