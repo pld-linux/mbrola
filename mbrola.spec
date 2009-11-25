@@ -1,5 +1,7 @@
 # NOTE:
-# - x86_64 version is actually 3.01d
+# - x86_64 version is actually 3.01d & 32bit
+# - real amd64 version says archidecture panic:
+#   http://tcts.fpms.ac.be/synthesis/mbrola/bin/amd64linux/mbrola_AMD_Linux.zip
 Summary:	MBROLA - a speech synthesizer based on the concatenation of diphones
 Summary(pl.UTF-8):	MBROLA - syntezator mowy bazujący na łączeniu dwuzgłosek
 Name:		mbrola
@@ -51,7 +53,7 @@ install -d $RPM_BUILD_ROOT%{_bindir}
 %ifarch %{ix86}
 install -p mbrola-linux-i386 $RPM_BUILD_ROOT%{_bindir}/mbrola
 %endif
-%ifarch x86_64
+%ifarch %{x8664}
 install -p mbrola $RPM_BUILD_ROOT%{_bindir}/mbrola
 %endif
 %ifarch ppc
@@ -78,7 +80,10 @@ rm -rf $RPM_BUILD_ROOT
 All persons listed below can be reached at <cvs_login>@pld-linux.org
 
 $Log: mbrola.spec,v $
-Revision 1.25  2009-10-22 19:15:52  glen
+Revision 1.26  2009-11-25 18:30:11  glen
+- some clarification on amd64
+
+Revision 1.25  2009/10/22 19:15:52  glen
 - preserve perms; rel 7
 
 Revision 1.24  2009/06/06 11:50:03  glen
