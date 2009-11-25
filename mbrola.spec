@@ -57,7 +57,7 @@ install -p mbrola-linux-i386 $RPM_BUILD_ROOT%{_bindir}/mbrola
 install -p mbrola $RPM_BUILD_ROOT%{_bindir}/mbrola
 %endif
 %ifarch ppc
-install -p mbrola206a-linux-ppc $RPM_BUILD_ROOT%{_bindir}/mbrola
+install -p mbrola302b-linux-ppc $RPM_BUILD_ROOT%{_bindir}/mbrola
 %endif
 %ifarch alpha
 install -p mbrola-linux-alpha $RPM_BUILD_ROOT%{_bindir}/mbrola
@@ -80,7 +80,10 @@ rm -rf $RPM_BUILD_ROOT
 All persons listed below can be reached at <cvs_login>@pld-linux.org
 
 $Log: mbrola.spec,v $
-Revision 1.26  2009-11-25 18:30:11  glen
+Revision 1.27  2009-11-25 18:55:00  glen
+- use mbrola302b-linux-ppc for ppc
+
+Revision 1.26  2009/11/25 18:30:11  glen
 - some clarification on amd64
 
 Revision 1.25  2009/10/22 19:15:52  glen
