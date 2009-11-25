@@ -1,5 +1,5 @@
 # NOTE:
-# - x86_64 version is actually 3.01d & 32bit
+# - x86_64 version is actually 3.01d & 32bit @ http://tcts.fpms.ac.be/synthesis/mbrola/bin/amd64linux/mbrola.zip
 # - real amd64 version says archidecture panic:
 #   http://tcts.fpms.ac.be/synthesis/mbrola/bin/amd64linux/mbrola_AMD_Linux.zip
 Summary:	MBROLA - a speech synthesizer based on the concatenation of diphones
@@ -11,12 +11,13 @@ License:	Non-commercial, non-military purposes, w/ and only w/ the voice and lan
 Group:		Applications/Sound
 Source0:	http://tcts.fpms.ac.be/synthesis/mbrola/bin/pclinux/mbr%{version}.zip
 # Source0-md5:	95314c9a545918729a5965f86859a28e
-Source1:	http://tcts.fpms.ac.be/synthesis/%{name}/bin/amd64linux/mbrola.zip
-# Source1-md5:	49e95e232d8d996351ad04dcc6392857
 URL:		http://tcts.fpms.ac.be/synthesis/mbrola.html
 BuildRequires:	unzip
 ExclusiveArch:	%{ix86} %{x8664} ppc alpha sparc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+# binaries are without debuginfo
+%define		_enable_debug_packages	0
 
 %description
 MBROLA is a speech synthesizer based on the concatenation of diphones.
@@ -44,17 +45,14 @@ uzyskać pełny system TTS trzeba posługiwać się tym syntezatorem
 fonetyczno-prozodyczne jako dane wynikowe.
 
 %prep
-%setup -q -c -T -a 0 -a 1
+%setup -q -c -T -a 0
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
 
-%ifarch %{ix86}
+%ifarch %{ix86} %{x8664}
 install -p mbrola-linux-i386 $RPM_BUILD_ROOT%{_bindir}/mbrola
-%endif
-%ifarch %{x8664}
-install -p mbrola $RPM_BUILD_ROOT%{_bindir}/mbrola
 %endif
 %ifarch ppc
 install -p mbrola302b-linux-ppc $RPM_BUILD_ROOT%{_bindir}/mbrola
@@ -80,7 +78,11 @@ rm -rf $RPM_BUILD_ROOT
 All persons listed below can be reached at <cvs_login>@pld-linux.org
 
 $Log: mbrola.spec,v $
-Revision 1.27  2009-11-25 18:55:00  glen
+Revision 1.28  2009-11-25 19:00:33  glen
+- use same binary on x86_64 as on i686, it's newer and previous was 32bit anyway
+- disable debuginfo package
+
+Revision 1.27  2009/11/25 18:55:00  glen
 - use mbrola302b-linux-ppc for ppc
 
 Revision 1.26  2009/11/25 18:30:11  glen
