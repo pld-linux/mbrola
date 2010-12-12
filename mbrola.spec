@@ -6,14 +6,14 @@ Summary:	MBROLA - a speech synthesizer based on the concatenation of diphones
 Summary(pl.UTF-8):	MBROLA - syntezator mowy bazujący na łączeniu dwuzgłosek
 Name:		mbrola
 Version:	301h
-Release:	7
+Release:	8
 License:	Non-commercial, non-military purposes, w/ and only w/ the voice and language databases available on http://tcts.fpms.ac.be/synthesis/
 Group:		Applications/Sound
 Source0:	http://tcts.fpms.ac.be/synthesis/mbrola/bin/pclinux/mbr%{version}.zip
 # Source0-md5:	95314c9a545918729a5965f86859a28e
 URL:		http://tcts.fpms.ac.be/synthesis/mbrola.html
 BuildRequires:	unzip
-ExclusiveArch:	%{ix86} %{x8664} ppc alpha sparc
+ExclusiveArch:	%{ix86} ppc alpha sparc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 # binaries are without debuginfo
@@ -51,7 +51,7 @@ fonetyczno-prozodyczne jako dane wynikowe.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
 
-%ifarch %{ix86} %{x8664}
+%ifarch %{ix86}
 install -p mbrola-linux-i386 $RPM_BUILD_ROOT%{_bindir}/mbrola
 %endif
 %ifarch ppc
@@ -78,7 +78,10 @@ rm -rf $RPM_BUILD_ROOT
 All persons listed below can be reached at <cvs_login>@pld-linux.org
 
 $Log: mbrola.spec,v $
-Revision 1.28  2009-11-25 19:00:33  glen
+Revision 1.29  2010-12-12 11:38:10  arekm
+- rel 8; don't use x86 binary on x86_64; install i686 package on x86_64 system if you need this
+
+Revision 1.28  2009/11/25 19:00:33  glen
 - use same binary on x86_64 as on i686, it's newer and previous was 32bit anyway
 - disable debuginfo package
 
