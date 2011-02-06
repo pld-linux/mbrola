@@ -74,11 +74,14 @@ rm -rf $RPM_BUILD_ROOT
 
 %define date	%(LC_ALL="C" date +"%a %b %d %Y")
 %changelog
-* %{date}  PLD Team <feedback@pld-linux.org>
+* %{date} PLD Team <feedback@pld-linux.org>
 All persons listed below can be reached at <cvs_login>@pld-linux.org
 
 $Log: mbrola.spec,v $
-Revision 1.29  2010-12-12 11:38:10  arekm
+Revision 1.30  2011-02-06 23:18:04  sparky
+- unified preamble in %changelog
+
+Revision 1.29  2010/12/12 11:38:10  arekm
 - rel 8; don't use x86 binary on x86_64; install i686 package on x86_64 system if you need this
 
 Revision 1.28  2009/11/25 19:00:33  glen
