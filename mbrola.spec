@@ -42,8 +42,10 @@ fonetyczno-prozodyczne jako dane wynikowe.
 %prep
 %setup -q -n MBROLA-%{version}
 
+export CC=%{__cc}
+export CFLAGS"=%{rpmcflags}"
 %{__make} version
-%{__make}
+%{__make} -j1
 
 %install
 rm -rf $RPM_BUILD_ROOT
