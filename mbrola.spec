@@ -1,12 +1,12 @@
-# NOTE:
-# - amd64 version says "Architecture PANIC!":
-#   http://tcts.fpms.ac.be/synthesis/mbrola/bin/amd64linux/mbrola_AMD_Linux.zip
+#
+# TODO: Fix custom CFLAGS
+#
 Summary:	MBROLA - a speech synthesizer based on the concatenation of diphones
 Summary(pl.UTF-8):	MBROLA - syntezator mowy bazujący na łączeniu dwuzgłosek
 Name:		mbrola
 Version:	3.3
 Epoch:		1
-Release:	0.1
+Release:	1
 License:	AGPL v3+
 Group:		Applications/Sound
 Source0:	https://github.com/numediart/MBROLA/archive/%{version}/%{name}-%{version}.tar.gz
@@ -40,18 +40,21 @@ uzyskać pełny system TTS trzeba posługiwać się tym syntezatorem
 fonetyczno-prozodyczne jako dane wynikowe.
 
 %prep
-%setup -q
+%setup -q -n MBROLA-%{version}
 
+%{__make} version
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
 
+cp -p Bin/mbrola $RPM_BUILD_ROOT%{_bindir}/
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc readme.txt
+%doc README.md
 %attr(755,root,root) %{_bindir}/mbrola
