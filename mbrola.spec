@@ -4,20 +4,15 @@
 Summary:	MBROLA - a speech synthesizer based on the concatenation of diphones
 Summary(pl.UTF-8):	MBROLA - syntezator mowy bazujący na łączeniu dwuzgłosek
 Name:		mbrola
-Version:	301h
-Release:	8
-License:	Non-commercial, non-military purposes, w/ and only w/ the voice and language databases available on http://tcts.fpms.ac.be/synthesis/
+Version:	3.3
+Epoch:		1
+Release:	0.1
+License:	AGPL v3+
 Group:		Applications/Sound
-#Source0Download: http://tcts.fpms.ac.be/synthesis/mbrola/mbrcopybin.html
-Source0:	http://tcts.fpms.ac.be/synthesis/mbrola/bin/pclinux/mbr%{version}.zip
-# Source0-md5:	95314c9a545918729a5965f86859a28e
-URL:		http://tcts.fpms.ac.be/synthesis/mbrola.html
-BuildRequires:	unzip
-ExclusiveArch:	%{ix86} ppc alpha sparc
+Source0:	https://github.com/numediart/MBROLA/archive/%{version}/%{name}-%{version}.tar.gz
+# Source0-md5:	06993903c7b8d3a8d21cc66cd5a28219
+URL:		https://github.com/numediart/MBROLA
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-# binaries are without debuginfo
-%define		_enable_debug_packages	0
 
 %description
 MBROLA is a speech synthesizer based on the concatenation of diphones.
@@ -45,24 +40,13 @@ uzyskać pełny system TTS trzeba posługiwać się tym syntezatorem
 fonetyczno-prozodyczne jako dane wynikowe.
 
 %prep
-%setup -q -c
+%setup -q
+
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
-
-%ifarch %{ix86}
-install -p mbrola-linux-i386 $RPM_BUILD_ROOT%{_bindir}/mbrola
-%endif
-%ifarch ppc
-install -p mbrola302b-linux-ppc $RPM_BUILD_ROOT%{_bindir}/mbrola
-%endif
-%ifarch alpha
-install -p mbrola-linux-alpha $RPM_BUILD_ROOT%{_bindir}/mbrola
-%endif
-%ifarch sparc
-install -p mbrola-SuSElinux-ultra1.dat $RPM_BUILD_ROOT%{_bindir}/mbrola
-%endif
 
 %clean
 rm -rf $RPM_BUILD_ROOT
